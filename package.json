@@ -1,13 +1,26 @@
 {
   "name": "@zecos/input-picker",
-  "version": "0.0.1",
-  "description": "Date pickers for material ui to be used in conjunction with @zecos/input",
+  "version": "0.0.2",
+  "description": "`@zecos/input` material-ui input pickersversion",
   "author": "zecos",
   "license": "MIT",
   "repository": "zecos/input-picker",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "jsnext:main": "dist/index.es.js",
+  "keywords": [
+    "zecos",
+    "forms",
+    "form",
+    "inputs",
+    "inputs",
+    "material ui",
+    "text field",
+    "text input",
+    "input",
+    "form control"
+  ],
   "engines": {
     "node": ">=8",
     "npm": ">=5"
@@ -23,20 +36,20 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "@date-io/date-fns": "^1.3.13",
-    "@material-ui/pickers": "^3.2.8",
-    "@zecos/input": "*",
-    "react": "*"
+    "react": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
     "@types/jest": "^23.1.5",
     "@types/react": "^16.3.13",
     "@types/react-dom": "^16.0.5",
+    "@zecos/fields": "^0.0.0",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.1.4",
     "gh-pages": "^1.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-scripts-ts": "^2.16.0",
     "rollup": "^0.62.0",
     "rollup-plugin-babel": "^3.0.7",
