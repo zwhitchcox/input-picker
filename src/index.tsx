@@ -1,23 +1,62 @@
-/**
- * @class ExampleComponent
- */
-
 import * as React from 'react'
+import { createInput } from "@zecos/input"
+import DateFnsUtils from '@date-io/date-fns'
 
-import styles from './styles.css'
+import {
+  KeyboardDatePicker,
+  MuiPickersUtilsProvider,
+  KeyboardTimePicker,
+} from '@material-ui/pickers'
 
-export type Props = { text: string }
+export const TimePickerInput = createInput(({helpers, props, actions, state}) => {
+  const {
+    id,
+    label,
+  } = helpers
+  const {value} = state
+  const dateVal = new Date(value)
 
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
+  return (
+    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      <KeyboardTimePicker
+        margin="normal"
+        id={id}
+        variant="inline"
+        label={label}
+        value={dateVal}
+        onChange={newDate => actions.setValue(newDate)}
+        KeyboardButtonProps={{
+          'aria-label': 'change time',
+        }}
+        {...props}
+      />
+    </MuiPickersUtilsProvider>
+  );
+})
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export const DatePickerInput = createInput(({helpers, props, actions, state}) => {
+  const {
+    id,
+    label,
+  } = helpers
+  const {value} = state
+  const dateVal = new Date(value)
+
+  return (
+    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+      <KeyboardDatePicker
+        margin="normal"
+        variant="inline"
+        id={id}
+        label={label}
+        format="MM/dd/yyyy"
+        value={dateVal}
+        onChange={newDate => actions.setValue(newDate)}
+        KeyboardButtonProps={{
+          'aria-label': 'change date',
+        }}
+        {...props}
+      />
+    </MuiPickersUtilsProvider>
+  )
+})

@@ -15,3 +15,7 @@ declare module '*.svg' {
   export default svgUrl;
   export { svgComponent as ReactComponent }
 }
+
+declare module "@material-ui/pickers"
+declare module "@zecos/input"
+declare module "@date-io/date-fns"
