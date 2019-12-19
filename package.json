@@ -1,6 +1,6 @@
 {
   "name": "@zecos/input-picker",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Date pickers for material ui to be used in conjunction with @zecos/input",
   "author": "zecos",
   "license": "MIT",
